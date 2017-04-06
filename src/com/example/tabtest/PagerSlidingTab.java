@@ -56,10 +56,10 @@ public class PagerSlidingTab extends HorizontalScrollView {
 	//当需要使用带图标的页签时，必须实现此类
 	public interface IconTabProvider {
 		
-		/**此方法用于获取未被选中时的图标样式*/
+		/**此方法用于获取未被选中时的图标样式的id*/
 		public int getDefaultIcon(int position);
 		
-		/**此方法用于获取被选中时的图标样式*/
+		/**此方法用于获取被选中时的图标样式的id*/
 		public int getSelectIcon(int position);
 	}
 	
@@ -471,9 +471,9 @@ public class PagerSlidingTab extends HorizontalScrollView {
 	 * @param topAndBottomPadding
 	 * 		标题的上下边距
 	 */
-	public void setTabPadding(int leftAndRightPadding, int topAndBottomPadding) {
-		mTabHorizontalPadding = dip2px(leftAndRightPadding);
-		mTabVerticalPadding = dip2px(topAndBottomPadding);
+	public void setTabPadding(int horizontalPadding, int verticalPadding) {
+		mTabHorizontalPadding = dip2px(horizontalPadding);
+		mTabVerticalPadding = dip2px(verticalPadding);
 		changeTabStyles();
 	}
 	
